@@ -4,7 +4,7 @@ This is a ready to use template for any landing page you need, built with React,
 
 Modelled after the [Vivid landing page](https://vivid.lol).
 
-> NOTE: This version of our landing page template is simplified to be less modular. Although this has some downsides for code quality, it makes this project more approachable for those unfamiliar with front end.
+> NOTE: This version of our landing page template is simplified to be less modular than our [standard template](https://github.com/vivid-labs/vivid-landing-template). Although this has some downsides for code quality, it makes this project more approachable for those unfamiliar with front end.
 
 ## Preview
 
