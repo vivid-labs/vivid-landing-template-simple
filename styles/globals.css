@@ -1,0 +1,12 @@
+/* Download Avenir */
+@import url('http://fonts.cdnfonts.com/css/avenir-next-cyr');
+
+/* Import Tailwind classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;  
+
+/* Make focus ring prettier */
+*:focus {
+  outline: auto;
+}
