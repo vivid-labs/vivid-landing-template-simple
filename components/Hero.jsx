@@ -61,7 +61,7 @@ export const Hero = () => {
             data-aos-delay="300"
           >
             <form
-              className="relative flex mt-8 flex-row items-center"
+              className="relative flex flex-row items-center"
               onSubmit={handleSubmit}
             >
               <input
