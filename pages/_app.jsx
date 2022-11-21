@@ -7,12 +7,6 @@ import { NextSeo } from "next-seo";
 import { useEffect } from "react";
 import { useDarkMode, useEffectOnce } from "usehooks-ts";
 
-// Initialize Vivid (https://vivid.lol)
-if (typeof window !== "undefined" && process.env.NODE_ENV === "development") {
-  import("vivid-studio").then((v) => v.run());
-  import("vivid-studio/style.css");
-}
-
 const siteTitle = "Vivid — Build visually. Code faster.";
 const siteDescription =
   "Make CSS styling a breeze with Vivid's in-browser visual editor that automatically updates your code.";
