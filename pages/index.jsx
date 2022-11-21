@@ -6,15 +6,9 @@ import { Hero } from "../components/Hero";
 import { Newsletter } from "../components/Newsletter";
 import { Testimonials } from "../components/Testimonials";
 
-const Home = ({
-  isDarkMode,
-  toggleDarkMode,
-}: {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}) => {
+const Home = ({ isDarkMode, toggleDarkMode }) => {
   return (
-    <div className="overflow-hidden flex flex-col text-gray-800 dark:text-gray-100">
+    <div className="flex flex-col overflow-hidden text-gray-800 dark:text-gray-100">
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <main>
         <Hero />

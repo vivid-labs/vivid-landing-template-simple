@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 import { NewsletterSpheres } from "../svg/NewsletterSpheres";
@@ -18,7 +18,7 @@ export const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setEmailSubmitted(true);
     const res = await axios.post("/api/waitlist", { email });
@@ -27,10 +27,10 @@ export const Newsletter = () => {
   };
   return (
     <section className="relative overflow-hidden bg-gray-50 dark:bg-gray-900">
-      <div className="relative z-20 px-4 py-24 mx-auto flex flex-col max-w-7xl dark sm:px-12">
+      <div className="relative z-20 flex flex-col px-4 py-24 mx-auto max-w-7xl dark sm:px-12">
         <div className="relative flex-1 w-full px-4 py-16 overflow-hidden border border-gray-300 rounded-lg shadow-xl dark:border-gray-600 bg-gray-50 dark:bg-gray-900 sm:px-16">
           <Background />
-          <div className="gap-6 text-center md:text-left flex flex-col md:w-1/2 ">
+          <div className="flex flex-col gap-6 text-center md:text-left md:w-1/2 ">
             <h2 className="text-3xl font-bold text-gray-100">
               Save your spot today
             </h2>
@@ -44,7 +44,7 @@ export const Newsletter = () => {
               data-aos-delay="300"
             >
               <form
-                className="relative gap-2 md:gap-4 flex flex-row"
+                className="relative flex flex-row gap-2 md:gap-4"
                 onSubmit={handleSubmit}
               >
                 <input
@@ -56,11 +56,11 @@ export const Newsletter = () => {
                   onChange={(event) => setEmail(event.target.value)}
                   value={email}
                   required
-                  className="w-full px-4 py-3 placeholder-gray-400 border rounded-lg dark:placeholder-gray-600 bg-gray-100 dark:bg-gray-800 first-line:border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-100"
+                  className="w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-gray-100 border rounded-lg dark:placeholder-gray-600 dark:bg-gray-800 first-line:border-gray-200 dark:border-gray-600 dark:text-gray-100"
                 />
                 <label
                   htmlFor="newsletter-waitlist"
-                  className="absolute z-10 text-xs -top-2 left-4 text-gray-600 dark:text-gray-400"
+                  className="absolute z-10 text-xs text-gray-600 -top-2 left-4 dark:text-gray-400"
                 >
                   Your Email
                 </label>

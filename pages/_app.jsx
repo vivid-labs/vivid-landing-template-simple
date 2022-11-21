@@ -2,7 +2,6 @@ import "aos/dist/aos.css";
 import "../styles/globals.css";
 
 import AOS from "aos";
-import type { AppProps } from "next/app";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
 import { useEffect } from "react";
@@ -18,7 +17,7 @@ const siteTitle = "Vivid — Build visually. Code faster.";
 const siteDescription =
   "Make CSS styling a breeze with Vivid's in-browser visual editor that automatically updates your code.";
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }) => {
   const { isDarkMode, toggle: toggleDarkMode } = useDarkMode();
 
   useEffect(() => {

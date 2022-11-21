@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ export const Hero = () => {
   const [email, setEmail] = useState("");
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setEmailSubmitted(true);
     const res = await axios.post("/api/waitlist", { email });
@@ -24,7 +24,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-10 backdrop-blur-[200px]" />
       <div className="md:-left-[28rem] -left-40 -top-40 md:-top-[28rem] bg-neon-pink absolute opacity-60 dark:opacity-30 rounded-full w-96 h-96 md:w-[48rem] md:h-[48rem]" />
       <div className="md:-right-[28rem] -right-40 -bottom-40 md:-bottom-[28rem] bg-neon-blue absolute opacity-60 dark:opacity-30 rounded-full w-96 h-96 md:w-[48rem] md:h-[48rem]" />
-      <div className="relative z-20 px-12 py-24 mx-auto flex flex-col max-w-7xl items-center justify-center min-h-screen 2xl:min-h-[1000px] h-fit gap-16 flex flex-col md:flex-row">
+      <div className="relative z-20 px-12 py-24 mx-auto flex flex-col max-w-7xl items-center justify-center min-h-screen 2xl:min-h-[1000px] h-fit gap-16 md:flex-row">
         <div
           className="absolute inset-0 translate-y-32 pointer-events-none dark:invert dark:brightness-90"
           aria-hidden="true"
@@ -32,10 +32,10 @@ export const Hero = () => {
           <ScatteredSpheres />
         </div>
         {/* Text */}
-        <div className="z-10 gap-4 text-center flex flex-col md:text-left">
+        <div className="z-10 flex flex-col gap-4 text-center md:text-left">
           <h1
             data-aos="zoom-y-out"
-            className="font-bold leading-tight tracking-tighter text-5xl md:text-7xl text-gray-800 dark:text-gray-100"
+            className="text-5xl font-bold leading-tight tracking-tighter text-gray-800 md:text-7xl dark:text-gray-100"
           >
             Build{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink to-neon-blue">
@@ -50,7 +50,7 @@ export const Hero = () => {
           <p
             data-aos="zoom-y-out"
             data-aos-delay="150"
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-400"
+            className="text-lg text-gray-600 md:text-xl dark:text-gray-400"
           >
             Vivid makes front-end development effortless with our in-browser
             visual editor to modify your code.
@@ -61,7 +61,7 @@ export const Hero = () => {
             data-aos-delay="300"
           >
             <form
-              className="relative gap-2 md:gap-4 flex flex-row"
+              className="relative flex flex-row gap-2 md:gap-4"
               onSubmit={handleSubmit}
             >
               <input
@@ -73,11 +73,11 @@ export const Hero = () => {
                 onChange={(event) => setEmail(event.target.value)}
                 value={email}
                 required
-                className="w-full px-4 py-3 placeholder-gray-400 border rounded-lg dark:placeholder-gray-600 bg-gray-100 dark:bg-gray-800 first-line:border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-100"
+                className="w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-gray-100 border rounded-lg dark:placeholder-gray-600 dark:bg-gray-800 first-line:border-gray-200 dark:border-gray-600 dark:text-gray-100"
               />
               <label
                 htmlFor="hero-waitlist"
-                className="absolute z-10 text-xs -top-2 left-4 text-gray-600 dark:text-gray-400"
+                className="absolute z-10 text-xs text-gray-600 -top-2 left-4 dark:text-gray-400"
               >
                 Your Email
               </label>
@@ -100,7 +100,7 @@ export const Hero = () => {
         {/* Image */}
         <div
           data-aos="fade-left"
-          className="relative justify-center w-full max-w-2xl overflow-hidden shadow-lg flex flex-col rounded-lg md:rounded-xl"
+          className="relative flex flex-col justify-center w-full max-w-2xl overflow-hidden rounded-lg shadow-lg md:rounded-xl"
         >
           <Image
             src={MacBarSrc}

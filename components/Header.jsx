@@ -7,13 +7,7 @@ import { Moon, Sun } from "../svg/DarkModeIcons";
 
 // Built with Vivid (https://vivid.lol) ⚡️
 
-export const Header = ({
-  isDarkMode,
-  toggleDarkMode,
-}: {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}) => {
+export const Header = ({ isDarkMode, toggleDarkMode }) => {
   const [top, setTop] = useState(true);
   const [nextSection, setNextSection] = useState(false);
   const [reloaded, setReloaded] = useState(false);
@@ -37,7 +31,7 @@ export const Header = ({
 
   const Logo = () => (
     <Link href="/">
-      <div className="items-center block gap-1 flex flex-row">
+      <div className="flex flex-row items-center gap-1">
         <Image src="/images/logo.png" alt="Vivid logo" height="40" width="40" />
         <div className="text-3xl font-bold">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-pink to-neon-blue">
@@ -50,7 +44,7 @@ export const Header = ({
 
   const Navigation = () => (
     <nav>
-      <ul className="items-center gap-2 flex flex-row">
+      <ul className="flex flex-row items-center gap-2">
         {reloaded ? ( // Only show after first reload
           <li>
             <button
@@ -93,7 +87,7 @@ export const Header = ({
       }`}
     >
       {/* Header Content */}
-      <div className="items-center justify-between h-16 px-5 mx-auto flex flex-row md:h-20 max-w-7xl sm:px-6">
+      <div className="flex flex-row items-center justify-between h-16 px-5 mx-auto md:h-20 max-w-7xl sm:px-6">
         <Logo />
         <Navigation />
       </div>
