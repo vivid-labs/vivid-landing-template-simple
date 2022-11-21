@@ -24,7 +24,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-10 backdrop-blur-[200px]" />
       <div className="md:-left-[28rem] -left-40 -top-40 md:-top-[28rem] bg-neon-pink absolute opacity-60 dark:opacity-30 rounded-full w-96 h-96 md:w-[48rem] md:h-[48rem]" />
       <div className="md:-right-[28rem] -right-40 -bottom-40 md:-bottom-[28rem] bg-neon-blue absolute opacity-60 dark:opacity-30 rounded-full w-96 h-96 md:w-[48rem] md:h-[48rem]" />
-      <div className="relative z-20 px-12 py-24 mx-auto flex flex-col max-w-7xl items-center justify-center min-h-screen 2xl:min-h-[1000px] h-fit gap-16 md:flex-row">
+      <div className="relative z-20 px-12 py-24 mx-auto max-w-7xl items-center justify-center min-h-screen 2xl:min-h-[1000px] h-fit">
         <div
           className="absolute inset-0 translate-y-32 pointer-events-none dark:invert dark:brightness-90"
           aria-hidden="true"
@@ -32,7 +32,7 @@ export const Hero = () => {
           <ScatteredSpheres />
         </div>
         {/* Text */}
-        <div className="z-10 flex flex-col gap-4 text-center md:text-left">
+        <div className="z-10 flex flex-col gap-4">
           <h1
             data-aos="zoom-y-out"
             className="text-5xl font-bold leading-tight tracking-tighter text-gray-800 md:text-7xl dark:text-gray-100"
@@ -50,7 +50,7 @@ export const Hero = () => {
           <p
             data-aos="zoom-y-out"
             data-aos-delay="150"
-            className="text-lg text-gray-600 md:text-xl dark:text-gray-400"
+            className="text-lg md:text-xl text-black"
           >
             Vivid makes front-end development effortless with our in-browser
             visual editor to modify your code.
@@ -61,7 +61,7 @@ export const Hero = () => {
             data-aos-delay="300"
           >
             <form
-              className="relative flex flex-row gap-2 md:gap-4"
+              className="relative flex mt-8 flex-row items-center"
               onSubmit={handleSubmit}
             >
               <input
@@ -73,7 +73,7 @@ export const Hero = () => {
                 onChange={(event) => setEmail(event.target.value)}
                 value={email}
                 required
-                className="w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-gray-100 border rounded-lg dark:placeholder-gray-600 dark:bg-gray-800 first-line:border-gray-200 dark:border-gray-600 dark:text-gray-100"
+                className="w-full text-gray-800 placeholder-gray-400 bg-gray-100 border rounded-lg dark:placeholder-gray-600 dark:bg-gray-800 first-line:border-gray-200 dark:border-gray-600 dark:text-gray-100"
               />
               <label
                 htmlFor="hero-waitlist"
@@ -85,7 +85,7 @@ export const Hero = () => {
               <div className="absolute top-0 w-[4.3rem] h-[2px] bg-gray-100 dark:bg-gray-800 left-3" />
               <button
                 type="submit"
-                className="px-4 py-2 font-bold rounded-lg text-gray-50 bg-primary-600 hover:bg-primary-700 w-fit"
+                className="font-bold rounded-lg text-gray-50 hover:bg-primary-700 bg-gray-600 md:px-2"
               >
                 Waitlist
               </button>

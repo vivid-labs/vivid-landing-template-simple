@@ -87,7 +87,7 @@ export const Header = ({ isDarkMode, toggleDarkMode }) => {
       }`}
     >
       {/* Header Content */}
-      <div className="flex flex-row items-center justify-between h-16 px-5 mx-auto md:h-20 max-w-7xl sm:px-6">
+      <div className="flex flex-row items-center justify-between h-16 mx-auto md:h-20 max-w-7xl sm:px-6">
         <Logo />
         <Navigation />
       </div>

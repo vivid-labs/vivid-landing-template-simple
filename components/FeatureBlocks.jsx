@@ -88,16 +88,6 @@ export const FeatureBlocks = () => {
             </p>
           </div>
           {/* Block 6 */}
-          <div className="relative items-center flex-1 gap-1 p-6 border border-gray-300 rounded-lg shadow-xl dark:border-gray-600 bg-gray-100 dark:bg-gray-800 flex flex-col">
-            <MagicIcon />
-            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
-              Smarter inspect element
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Understand and modify the components making up your design with
-              just one click
-            </p>
-          </div>
         </div>
       </div>
     </section>
